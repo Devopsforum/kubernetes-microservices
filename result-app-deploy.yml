@@ -13,13 +13,13 @@ spec:
       app: demo-voting-app
   template:
     metadata:
-      name: worker-app-pod
+      name: result-app-pod
       labels:
-        name: worker-app-pod
+        name: result-app-pod
         app: demo-voting-app
     spec:
       containers:
-        - name: worker-app
-          image: kodekloud/examplevoting_worker:v1
+        - name: result-app
+          image: kodekloud/examplevoting_result:v1
           ports:
             - containerPort: 80
