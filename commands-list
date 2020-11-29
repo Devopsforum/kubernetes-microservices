@@ -42,5 +42,54 @@ kubectl create -f result-app-service.yml
 # to inspect the status of the pod and service use the below command
 kubectl get pods,svc --> this will give the status for both pods and services created previously
 
-
 minikube service result-service --url --> to get the url for accessing the app through browser
+
+# Commands to use deployment instead of the services
+# to create the voting app deployment 
+kubectl create -f voting-app-deploy.yml
+
+# to create the voting-app service
+kubectl create -f voting-app-service.yml
+
+# command to check the deployment status
+kubectl get deployments
+
+# to create the redis app deployment 
+kubectl create -f redis-deploy.yml
+
+# to create the redis service
+kubectl create -f redis-service.yml
+
+# to create the postgres app deployment 
+kubectl create -f postgres-deploy.yml
+
+# to create the postgres service
+kubectl create -f postgres-service.yml
+
+# command to check the deployment status
+kubectl get deployments
+# command to check the pods status
+kubectl get pods
+
+# command to check the pods and services status
+kubectl get pods, svc
+
+# to create the result app deployment 
+kubectl create -f result-app-deploy.yml
+
+# to create the postgres service
+kubectl create -f result-app-service.yml
+
+# command to check the pods and services status
+kubectl get pods, svc
+# command to check the deployment status
+kubectl get deployments
+
+minikube service voting-service --url ---> to get the URL for browsing
+minikube service result-service --url ---> to get the URL for browsing
+
+# to scale up the deploymnet 
+kubectl scale deploymnet voting-app-deploy --replicas=3
+# to check the status 
+kubectl get deployments voting-app-deploy
+
