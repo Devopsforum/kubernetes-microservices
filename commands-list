@@ -1,2 +1,46 @@
-# to create the pod first
-kubectl create -f voting-app-defin
+# to create the voting app pod first
+kubectl create -f voting-app-pod.yml
+
+# to create the voting app service
+kubectl create -f voting-app-service.yml
+
+# to inspect the status of the pod and service use the below command
+kubectl get pods,svc --> this will give the status for both pods and services created previously
+
+minikube service voting-service --url --> to get the url for accessing the app through browser
+
+# to create the redis pod
+kubectl create -f redis-pod.yml
+
+# to create the redis service 
+kubectl create -f redis-service.yml
+
+# to inspect the status of the pod and service use the below command
+kubectl get pods,svc --> this will give the status for both pods and services created previously
+
+# to create the postgres pod 
+kubectl create -f postgres-pod.yml
+
+# to create the postgres service
+kubectl create -f postgres-service.yml
+
+# to inspect the status of the pod and service use the below command
+kubectl get pods,svc --> this will give the status for both pods and services created previously
+
+# to create the worker app pod
+kubectl create -f worker-app-pod.yml
+
+# to inspect the status of the pod and service use the below command
+kubectl get pods,svc --> this will give the status for both pods and services created previously
+
+# to create the result app pod
+kubectl create -f result-app-pod.yml
+
+# to create the result app service 
+kubectl create -f result-app-service.yml
+
+# to inspect the status of the pod and service use the below command
+kubectl get pods,svc --> this will give the status for both pods and services created previously
+
+
+minikube service result-service --url --> to get the url for accessing the app through browser
